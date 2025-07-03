@@ -96,38 +96,10 @@
             </div>
         </main>
 <script src="js/script.js"></script>
-        <script>
 
-            // Form Menu Message Us
-            document.getElementById("formInput").addEventListener("submit", function (e) {
-                e.preventDefault();
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-                const name = document.getElementById("name").value;
-                const dob = document.getElementById("dob").value;
-                const gender = document.querySelector('input[name="gender"]:checked').value;
-                const message = document.getElementById("message").value;
-
-                const tableBody = document.getElementById("tableBody");
-                const row = document.createElement("tr");
-
-                row.innerHTML = `
-        <td class="border px-3 py-2">${name}</td>
-        <td class="border px-3 py-2">${new Date(dob).toLocaleDateString('en-US', {
-                    year: 'numeric', month: 'long', day: 'numeric'
-                })}</td>
-        <td class="border px-3 py-2">${gender}</td>
-        <td class="border px-3 py-2">${message}</td>
-        <td class="border px-3 py-2 text-blue-600 underline"><a href="#">Klik Disini</a></td>
-        <td class="border px-3 py-2 text-center text-red-600"><button onclick="this.closest('tr').remove()">🗑️</button></td>
-      `;
-
-                tableBody.appendChild(row);
-
-                // Reset form setelah submit
-                this.reset();
-            });
-
-        </script>
+      
 </body>
 
 </html>
