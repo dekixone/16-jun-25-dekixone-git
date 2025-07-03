@@ -10,150 +10,106 @@
     <link type="text/css" href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="font-sans pt-20">
+<body class="font-sans bg-gray-100 pt-20">
 
-    <!-- Navbar -->
-    <header class="fixed top-0 w-full z-50 bg-white shadow-md">
-        <div class="flex justify-between items-center p-4 max-w-6xl mx-auto">
-            <!-- Logo -->
-            <div class="flex items-center">
-                <img src="img/logo.png" alt="Logo" class="h-10 w-10 rounded-full mr-2" />
-                <span class="font-bold text-lg">My Website</span>
+<!-- Tempat header disisipkan -->
+  <div id="header-container"></div>   
+
+<main class="p-6 bg-white shadow max-w-5xl mx-auto my-4 rounded-lg">
+    <section class="px-3">
+        <!-- Welcome Section -->
+        <section class="text-center my-8">
+            <!-- Text Header -->
+            <div class="mb-5 text-gray-500">
+                <h1 class="text-2xl md:text-3xl font-bold">Hi <span id="userName"></span>, Welcome To Website</h1>
+                <p class="text-gray-600 text-base md:text-lg">Ini adalah website latihan pertama</p>
             </div>
 
-            <!-- Hamburger button (visible on mobile) -->
-            <button id="nav-toggle" class="md:hidden text-gray-700 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-            </button>
+            <div class="flex justify-center ">
+                <img src="img/banner.png" alt="RevoU" class="min-w-screen flex justify-center h-auto object-cover" />
+            </div>
+        </section>
 
-            <!-- Navigation Links -->
-            <nav id="nav-menu" class="hidden md:flex space-x-4">
-                <a href="/"
-                    class="text-gray-700 hover:text-blue-500 transition-colors duration-300 transform hover:scale-110">Home</a>
-                <a href="profile.html"
-                    class="text-gray-700 hover:text-blue-500 transition-colors duration-300 transform hover:scale-110">Our
-                    Profile</a>
-                <a href="Archievement.html"
-                    class="text-gray-700 hover:text-blue-500 transition-colors duration-300 transform hover:scale-110">Achievement</a>
-                <a href="Message.html"
-                    class="text-gray-700 hover:text-blue-500 transition-colors duration-300 transform hover:scale-110">Message
-                    Us</a>
-            </nav>
-        </div>
+        <!-- Facilities Section -->
+        <section class="py-12 px-4 bg">
+  <h2 class="text-center text-xl md:text-2xl font-semibold mb-10 text-gray-800">Our Facilitation</h2>
+  
+  <div class="flex flex-wrap justify-center gap-8 md:gap-12">
+    <!-- Item 1 -->
+    <div class="text-center group w-28 sm:w-32 md:w-36">
+      <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto overflow-hidden rounded-full transform transition-transform duration-300 hover:scale-110">
+        <img src="img/foto_profesional.jpeg" alt="Professional Teacher" class="w-full h-full object-cover" />
+      </div>
+      <p class="mt-4 text-sm sm:text-base text-gray-700 px-3">Professional Teacher</p>
+    </div>
 
-        <!-- Dropdown menu (mobile) -->
-        <div id="nav-dropdown"
-            class="md:hidden hidden flex-col px-4 pb-4 space-y-2 bg-white shadow transition-all duration-300">
-            <a href="/"
-                class="block text-gray-700 hover:text-blue-500 transition-colors duration-300 transform hover:translate-x-2">Home</a>
-            <a href="profile.html"
-                class="block text-gray-700 hover:text-blue-500 transition-colors duration-300 transform hover:translate-x-2">Our
-                Profile</a>
-            <a href="Archievement.html"
-                class="block text-gray-700 hover:text-blue-500 transition-colors duration-300 transform hover:translate-x-2">Achievement</a>
-            <a href="Message.html"
-                class="block text-gray-700 hover:text-blue-500 transition-colors duration-300 transform hover:translate-x-2">Message
-                Us</a>
-        </div>
-    </header>
+    <!-- Item 2 -->
+    <div class="text-center group w-28 sm:w-32 md:w-36">
+      <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto overflow-hidden rounded-full transform transition-transform duration-300 hover:scale-110">
+        <img src="img/Sport Field.png" alt="Sport Field" class="w-full h-full object-cover" />
+      </div>
+      <p class="mt-4 text-sm sm:text-base text-gray-700">Sport Field</p>
+    </div>
 
-    <!-- Welcome Section -->
-    <section class="text-center my-8 px-4">
-        <!-- Text Header -->
-        <div class="mb-2 text-gray-500">
-            <h1 class="text-2xl md:text-3xl font-bold">Hi <span id="userName"></span>, Welcome To Website</h1>
-            <p class="text-gray-600 text-base md:text-lg">Ini adalah website latihan pertama</p>
-        </div>
-    </section>
+    <!-- Item 3 -->
+    <div class="text-center group w-28 sm:w-32 md:w-36">
+      <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto overflow-hidden rounded-full transform transition-transform duration-300 hover:scale-110">
+        <img src="img/classroom.png" alt="Classroom" class="w-full h-full object-cover" />
+      </div>
+      <p class="mt-4 text-sm sm:text-base text-gray-700">Classroom</p>
+    </div>
+  </div>
+</section>
 
 
-    <!-- Banner Image -->
-    <section class="my-8">
-        <div class="w-full">
-            <img src="img/banner.png" alt="RevoU" class="w-full h-auto object-cover" />
-        </div>
-    </section>
 
-    <!-- Facilities Section -->
-    <section class="py-12 bg-gray-100">
-        <h2 class="text-center text-xl font-semibold mb-6">Our Facilitation</h2>
-        <div class="flex justify-center space-x-10">
-            <div class="text-center">
-                <div class="w-24 h-24 mx-auto overflow-hidden rounded-full border">
-                    <img src="img/foto_profesional.jpeg" alt="Teacher Professional"
-                        class="w-full h-full object-cover rounded-full" />
+        <!-- Message Us Form -->
+        <section id="message" class="py-12">
+            <h2 class="text-xl font-bold mb-4">Message Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Form -->
+                <form onsubmit="return handleSubmit(event)" class="space-y-4">
+                    <input type="text" id="name" placeholder="Nama" class="w-full border p-2 rounded" required />
+
+                    <input type="date" id="dob" class="w-full border p-2 rounded" required />
+
+                    <div>
+                        <label class="mr-4">Jenis Kelamin:</label>
+                        <label><input type="radio" name="gender" value="Laki-Laki" required> Laki-Laki</label>
+                        <label class="ml-4"><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+                    </div>
+
+                    <textarea id="messageText" placeholder="Pesan" class="w-full border p-2 rounded" rows="4"
+                        required></textarea>
+
+                    <button type="submit" class="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">Submit</button>
+                </form>
+
+                <!-- Output Box -->
+                <div class="border p-4 rounded">
+
+                    <p class="pb-4"><strong>Current time:</strong> <span id="currentTime"></span></p>
+                    <p class="pb-2"><strong>Nama:</strong> <span id="outputName"></span></p>
+                    <p class="pb-2"><strong>Tanggal Lahir:</strong> <span id="outputDob"></span></p>
+                    <p class="pb-2"><strong>Jenis Kelamin:</strong> <span id="outputGender"></span></p>
+                    <p><strong>Pesan:</strong> <span id="outputMessage"></span></p>
                 </div>
-                <p class="mt-2">Professional Teacher</p>
             </div>
-            <div class="text-center">
-                <div class="w-24 h-24 mx-auto overflow-hidden rounded-full border">
-                    <img src="img/Sport Field.png" alt="Teacher Professional"
-                        class="w-full h-full object-cover rounded-full" />
-                </div>
-                <p class="mt-2">Sport Field</p>
-            </div>
-            <div class="text-center">
-                <div class="w-24 h-24 mx-auto overflow-hidden rounded-full border">
-                    <img src="img/classroom.png" alt="Teacher Professional"
-                        class="w-full h-full object-cover rounded-full" />
-                </div>
-                <p class="mt-2">Classroom</p>
-            </div>
-        </div>
+        </section>
     </section>
-
-    <!-- Message Us Form -->
-    <section id="message" class="py-12 px-4">
-        <h2 class="text-xl font-bold mb-4">Message Us</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-            <!-- Form -->
-            <form onsubmit="return handleSubmit(event)" class="space-y-4">
-                <input type="text" id="name" placeholder="Nama" class="w-full border p-2 rounded" required />
-
-                <input type="date" id="dob" class="w-full border p-2 rounded" required />
-
-                <div>
-                    <label class="mr-4">Jenis Kelamin:</label>
-                    <label><input type="radio" name="gender" value="Laki-Laki" required> Laki-Laki</label>
-                    <label class="ml-4"><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
-                </div>
-
-                <textarea id="messageText" placeholder="Pesan" class="w-full border p-2 rounded" rows="4"
-                    required></textarea>
-
-                <button type="submit" class="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">Submit</button>
-            </form>
-
-            <!-- Output Box -->
-            <div class="border p-4 rounded">
-             
-                <p class="pb-4"><strong>Current time:</strong> <span id="currentTime"></span></p>
-                <p class="pb-2"><strong>Nama:</strong> <span id="outputName"></span></p>
-                <p class="pb-2"><strong>Tanggal Lahir:</strong> <span id="outputDob"></span></p>
-                <p class="pb-2"><strong>Jenis Kelamin:</strong> <span id="outputGender"></span></p>
-                <p><strong>Pesan:</strong> <span id="outputMessage"></span></p>
-            </div>
-        </div>
-    </section>
-
+</main>
     <!-- Footer -->
     <footer class="text-right pr-4 text-sm text-gray-500 py-4 border-t">
         Created By RevoU
     </footer>
 
     <script src="js/script.js"></script>
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        // Toggle nav menu for mobile
-        document.getElementById('nav-toggle').addEventListener('click', function () {
-            const dropdown = document.getElementById('nav-dropdown');
-            dropdown.classList.toggle('hidden');
-        });
+
     </script>
 
 </body>
