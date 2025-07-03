@@ -31,33 +31,47 @@
         </section>
 
         <!-- Facilities Section -->
-        <section class="py-12 px-4 bg">
+        <section class="py-12 px-4 bg b-[]">
   <h2 class="text-center text-xl md:text-2xl font-semibold mb-10 text-gray-800">Our Facilitation</h2>
   
   <div class="flex flex-wrap justify-center gap-8 md:gap-12">
     <!-- Item 1 -->
-    <div class="text-center group w-28 sm:w-32 md:w-36">
-      <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto overflow-hidden rounded-full transform transition-transform duration-300 hover:scale-110">
-        <img src="img/foto_profesional.jpeg" alt="Professional Teacher" class="w-full h-full object-cover" />
-      </div>
-      <p class="mt-4 text-sm sm:text-base text-gray-700 px-3">Professional Teacher</p>
-    </div>
+    <!-- Item 1 -->
+<div class="text-center group w-28 sm:w-32 md:w-36 relative">
+  <div class="fireworks-container absolute inset-0 pointer-events-none"></div>
+  <div
+    class="w-24 h-24 sm:w-28 sm:h-28 mx-auto overflow-hidden rounded-full transform transition-transform duration-300 hover:scale-110 relative z-10"
+    onmouseenter="showFireworks(event, this)"
+  >
+    <img src="img/foto_profesional.jpeg" alt="Professional Teacher" class="w-full h-full object-cover" />
+  </div>
+  <p class="mt-4 text-sm sm:text-base text-gray-700 px-3">Professional Teacher</p>
+</div>
 
-    <!-- Item 2 -->
-    <div class="text-center group w-28 sm:w-32 md:w-36">
-      <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto overflow-hidden rounded-full transform transition-transform duration-300 hover:scale-110">
-        <img src="img/Sport Field.png" alt="Sport Field" class="w-full h-full object-cover" />
-      </div>
-      <p class="mt-4 text-sm sm:text-base text-gray-700">Sport Field</p>
-    </div>
+<!-- Item 2 -->
+<div class="text-center group w-28 sm:w-32 md:w-36 relative">
+  <div class="fireworks-container absolute inset-0 pointer-events-none"></div>
+  <div
+    class="w-24 h-24 sm:w-28 sm:h-28 mx-auto overflow-hidden rounded-full transform transition-transform duration-300 hover:scale-110 relative z-10"
+    onmouseenter="showFireworks(event, this)"
+  >
+    <img src="img/Sport Field.png" alt="Sport Field" class="w-full h-full object-cover" />
+  </div>
+  <p class="mt-4 text-sm sm:text-base text-gray-700 px-3">Sport Field</p>
+</div>
 
-    <!-- Item 3 -->
-    <div class="text-center group w-28 sm:w-32 md:w-36">
-      <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto overflow-hidden rounded-full transform transition-transform duration-300 hover:scale-110">
-        <img src="img/classroom.png" alt="Classroom" class="w-full h-full object-cover" />
-      </div>
-      <p class="mt-4 text-sm sm:text-base text-gray-700">Classroom</p>
-    </div>
+<!-- Item 3 -->
+<div class="text-center group w-28 sm:w-32 md:w-36 relative">
+  <div class="fireworks-container absolute inset-0 pointer-events-none"></div>
+  <div
+    class="w-24 h-24 sm:w-28 sm:h-28 mx-auto overflow-hidden rounded-full transform transition-transform duration-300 hover:scale-110 relative z-10"
+    onmouseenter="showFireworks(event, this)"
+  >
+    <img src="img/classroom.png" alt="Classroom" class="w-full h-full object-cover" />
+  </div>
+  <p class="mt-4 text-sm sm:text-base text-gray-700 px-3">Classroom</p>
+</div>
+  
   </div>
 </section>
 
@@ -108,9 +122,38 @@
     <!-- SweetAlert2 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script>
+    <!-- Fireworks JS dan CSS -->
+<script>
+function randomBetween(a, b) {
+  return a + Math.random() * (b - a);
+}
 
-    </script>
+function showFireworks(e, el) {
+  const container = el.parentElement.querySelector('.fireworks-container');
+  for (let i = 0; i < 15; i++) {
+    const particle = document.createElement("div");
+    const angle = (2 * Math.PI * i) / 15;
+    const distance = randomBetween(40, 80);
+    const color = `hsl(${randomBetween(0,360)}, 80%, 50%)`;
+    particle.className = "firework-particle pointer-events-none";
+    particle.style.left = "50%";
+    particle.style.top = "50%";
+    particle.style.background = color;
+    particle.style.setProperty("--dx", `${Math.cos(angle) * distance}px`);
+    particle.style.setProperty("--dy", `${Math.sin(angle) * distance}px`);
+    container.appendChild(particle);
+
+    setTimeout(() => {
+      particle.style.opacity = 0;
+      particle.style.transform = `translate(var(--dx), var(--dy)) scale(0.6)`;
+    }, 10);
+
+    setTimeout(() => {
+      particle.remove();
+    }, 800);
+  }
+}
+</script>
 
 </body>
 
