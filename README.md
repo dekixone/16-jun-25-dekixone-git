@@ -1,4 +1,4 @@
 - Tugas praktik untuk meningkatkan kemampuan basic coding
 - Project dapat bermanfaat untuk dijadikan mini portofolio pribadi
-- Tugas Mini Coding Project WAJIB dikerjakan melalui GitHub Classroom
+- Tugas Mini Coding Project WAJIB dikerjakan melalui GitHub Classroom berikut👉 https://rebrand.ly/fcse-github
 - Untuk mempermudah pengerjaannya, silakan cek tutorial ttg Git dan cara submit assignment disini 👉 https://rebrand.ly/Tutorial-Miniproject
