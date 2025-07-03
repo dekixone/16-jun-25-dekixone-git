@@ -1,11 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Profile</title>
+    <script defer src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link type="text/css" href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
-    Welcome Message
+
+    <!-- Navbar -->
+    <header class="fixed top-0 w-full z-50 bg-white shadow-md">
+        <div class="flex justify-between items-center p-4 max-w-6xl mx-auto">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="img/logo.png" alt="Logo" class="h-10 w-10 rounded-full mr-2" />
+                <span class="font-bold text-lg">My Website</span>
+            </div>
+
+            <!-- Hamburger button (mobile) -->
+            <button id="nav-toggle" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+
+            <!-- Desktop Menu -->
+            <nav id="nav-menu" class="hidden md:block">
+                <ul class="flex space-x-4">
+                    <li>
+                        <a href="/"
+                            class="block px-3 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-600 rounded transition">Home</a>
+                    </li>
+                    <li>
+                        <a href="profile.html"
+                            class="block px-3 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-600 rounded transition">Our
+                            Profile</a>
+                    </li>
+                    <li>
+                        <a href="Archievement.html"
+                            class="block px-3 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-600 rounded transition">Achievement</a>
+                    </li>
+                    <li>
+                        <a href="Message.html"
+                            class="block px-3 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-600 rounded transition">Message
+                            Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="nav-dropdown" class="md:hidden hidden px-4 pb-4 bg-white shadow-md">
+            <ul class="space-y-2">
+                <li>
+                    <a href="/"
+                        class="block px-4 py-2 text-gray-700 hover:bg-yellow-300 hover:text-blue-600 rounded transition">Home</a>
+                </li>
+                <li>
+                    <a href="profile.html"
+                        class="block px-4 py-2 text-gray-700 hover:bg-yellow-300 hover:text-blue-600 rounded transition">Our
+                        Profile</a>
+                </li>
+                <li>
+                    <a href="Archievement.html"
+                        class="block px-4 py-2 text-gray-700 hover:bg-yellow-300 hover:text-blue-600 rounded transition">Achievement</a>
+                </li>
+                <li>
+                    <a href="Message.html"
+                        class="block px-4 py-2 text-gray-700 hover:bg-yellow-300 hover:text-blue-600 rounded transition">Message
+                        Us</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+
+
+    <main class="p-6 bg-white shadow max-w-5xl mx-auto my-4 rounded-lg"></main>
+
+    <section class="px-3">
+        <!-- Welcome Section -->
+        <section class="text-center my-8">
+            <!-- Text Header -->
+            <div class="mb-5 text-gray-500">
+                <h1 class="text-2xl md:text-3xl font-bold">Hi <span id="userName"></span>, Welcome To Website</h1>
+                <p class="text-gray-600 text-base md:text-lg">Ini adalah website latihan pertama</p>
+            </div>
+
+
+        </section>
+        <main class="p-6 bg-white shadow max-w-5xl mx-auto my-4 rounded-lg">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Form -->
+                <section class="bg-white p-6 shadow rounded">
+                    <h2 class="text-2xl font-semibold mb-2">Form Belajar</h2>
+                    <p class="text-gray-600 mb-4">Ini adalah website latihan pertama</p>
+
+                    <form id="formInput" class="space-y-4">
+                        <div>
+                            <label class="block font-medium">Nama :</label>
+                            <input type="text" id="name" placeholder="Nama" required
+                                class="w-full border px-3 py-2 rounded" />
+                        </div>
+
+                        <div>
+                            <label class="block font-medium">Tanggal Lahir :</label>
+                            <input type="date" id="dob" required class="w-full border px-3 py-2 rounded" />
+                        </div>
+
+                        <div>
+                            <label class="block font-medium mb-1">Jenis Kelamin :</label>
+                            <label class="inline-flex items-center mr-4">
+                                <input type="radio" name="gender" value="Laki-Laki" required class="mr-2" /> Laki-Laki
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="gender" value="Perempuan" required class="mr-2" /> Perempuan
+                            </label>
+                        </div>
+
+                        <div>
+                            <label class="block font-medium">Pesan :</label>
+                            <textarea id="message" rows="4" placeholder="Pesan" required
+                                class="w-full border px-3 py-2 rounded"></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit"
+                                class="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded w-full">Submit</button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Table -->
+                <section class="bg-white p-6 shadow rounded overflow-x-auto">
+                    <table class="table-auto w-full border-collapse text-sm" id="dataTable">
+                        <thead>
+                            <tr class="bg-gray-200 text-left">
+                                <th class="border px-3 py-2">Nama</th>
+                                <th class="border px-3 py-2">Tanggal Lahir</th>
+                                <th class="border px-3 py-2">Jenis Kelamin</th>
+                                <th class="border px-3 py-2">Pesan</th>
+                                <th class="border px-3 py-2">Profile</th>
+                                <th class="border px-3 py-2">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- Data dinamis akan masuk di sini -->
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+
+        <script>
+
+            // Form Menu Message Us
+            document.getElementById("formInput").addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const name = document.getElementById("name").value;
+                const dob = document.getElementById("dob").value;
+                const gender = document.querySelector('input[name="gender"]:checked').value;
+                const message = document.getElementById("message").value;
+
+                const tableBody = document.getElementById("tableBody");
+                const row = document.createElement("tr");
+
+                row.innerHTML = `
+        <td class="border px-3 py-2">${name}</td>
+        <td class="border px-3 py-2">${new Date(dob).toLocaleDateString('en-US', {
+                    year: 'numeric', month: 'long', day: 'numeric'
+                })}</td>
+        <td class="border px-3 py-2">${gender}</td>
+        <td class="border px-3 py-2">${message}</td>
+        <td class="border px-3 py-2 text-blue-600 underline"><a href="#">Klik Disini</a></td>
+        <td class="border px-3 py-2 text-center text-red-600"><button onclick="this.closest('tr').remove()">🗑️</button></td>
+      `;
+
+                tableBody.appendChild(row);
+
+                // Reset form setelah submit
+                this.reset();
+            });
+
+        </script>
 </body>
+
 </html>

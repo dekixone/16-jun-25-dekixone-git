@@ -16,4 +16,11 @@
       document.getElementById('currentTime').textContent = now;
       return false;
     }
+
+    // Toggle nav menu for mobile
+        document.getElementById('nav-toggle').addEventListener('click', function () {
+            const dropdown = document.getElementById('nav-dropdown');
+            dropdown.classList.toggle('hidden');
+        });
   
+
